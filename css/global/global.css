@@ -1,0 +1,62 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--cor-5);
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--cor-p1);
+  border-radius: 20px; 
+  border: none;
+}
+
+.gotop{
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+}
+
+.gotop.ativo{
+  display: block;
+  animation: gotop 0.5s forwards ;
+}
+
+.container{
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+}
+
+@media (max-width:800px){
+  .container{
+    padding-bottom: 40px;
+    padding-top:40px;
+}
+}
+
+@keyframes gotop{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,34 @@
+:root{
+  --cor-0: #f9f9f9;
+  --cor-1: #a4a4a4;
+  --cor-2: #828282;
+  --cor-3: #333333;
+  --cor-4: #212121;
+  --cor-5: #171717;
+  --cor-p2: #0bbe56;
+}
+
+.cor-0{
+  color: #ffffff;
+}
+.cor-1{
+  color: #f8f8f8;
+}
+.cor-2{
+  color:rgb(0, 173, 111);
+  text-shadow: rgb(0, 173, 111) 0px 0px 10px;
+  
+}
+.cor-3{
+  color: #333333;
+}
+.cor-4{
+  color: #212121;
+}
+.cor-5{
+  color: #171717;
+}
+
+.cor-p2{
+  color:#0bbe56;
+}

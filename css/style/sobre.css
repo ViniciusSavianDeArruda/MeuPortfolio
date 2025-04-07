@@ -1,0 +1,58 @@
+.sobre h2{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sobre p{
+  max-width: 42ch;
+  margin-bottom: 20px;
+  
+
+} 
+
+.sobre-grid{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  
+  
+}
+
+.sobre-grid img{
+  width: 400px;
+  border-radius: 100px;
+  height: 700px;
+}
+
+@media (max-width:1000px){
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+
+
+button {
+  background: linear-gradient(to right, #04FF6E, #0b9946); /* Gradiente verde */
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 173, 111, 0.4);
+}
+
+button a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}

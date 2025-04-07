@@ -1,0 +1,54 @@
+.header {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.menu a:hover {
+  color: rgb(0, 173, 111); /* a cor que quiser no hover */
+}
+
+
+@media (max-width: 800px) {
+  .menu{
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--cor-4);
+    
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu{
+    gap: 20px 10px;
+  }
+
+  .menu a{
+    font-size: 14px;
+  }
+}
+
+

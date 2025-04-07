@@ -1,0 +1,54 @@
+.contato h2{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.lista-contato{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* esse ajuda na vertical também */
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+  gap: 40px;
+  
+}
+
+.lista-contato li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.lista-contato li .lista-img{
+  padding: 30px;
+  background-color: var(--cor-4);
+  border-radius: 50%;
+}
+
+.lista-contato li a>div:hover{
+  background-color: var(--cor-3);
+}
+
+
+@media (max-width:650px){
+
+  .lista-contato{
+    gap: 40px;
+  }
+  
+  .lista-contato li{
+    flex: 1 1 200px;
+  }
+
+  .lista-contato li .lista-img{
+    padding: 15px;
+  }
+}
+
+
+

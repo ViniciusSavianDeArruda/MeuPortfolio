@@ -1,0 +1,83 @@
+.minhas-skills {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.minhas-skills h2 {
+  margin-bottom: 60px;
+}
+
+/* Centraliza a lista e ajusta a largura */
+.lista-skills {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .lista-skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .lista-skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Estilo dos itens */
+.lista-skills li {
+  position: relative;
+  padding: 12px;
+  transition: transform 0.3s;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Efeito ao passar o mouse */
+.lista-skills li:hover {
+  transform: scale(1.05);
+}
+
+/* Centraliza imagem */
+.lista-skills li img {
+  max-width: 60px;
+  height: auto;
+}
+
+/* Tooltip com nome da skill */
+.lista-skills li::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.lista-skills li:hover::after {
+  opacity: 1;
+}
