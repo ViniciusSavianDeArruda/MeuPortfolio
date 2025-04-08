@@ -24,7 +24,7 @@ Este portfólio é uma forma de compartilhar minha trajetória, experiências e 
 
 ## 🌐 Acesse o Projeto
 
-🔗 [Clique aqui para ver o site no ar] (https://meu-portfolio-tan-sigma.vercel.app/)
+🔗 [Clique aqui para ver o site no ar] (https://meu-portfolio-rho-five.vercel.app/)
 
 ---
 
