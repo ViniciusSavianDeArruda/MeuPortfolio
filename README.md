@@ -1,7 +1,7 @@
 # 🚀 Meu Portfólio Pessoal
 
 Bem-vindo ao meu portfólio!  
-Aqui você vai encontrar informações sobre mim, meus projetos reais e habilidades com **HTML**, **CSS** e **JavaScript**.
+Aqui você vai encontrar informações sobre mim, meus projetos reais e habilidades
 
 ---
 
