@@ -1,54 +1,67 @@
-.contato h2{
+/* Estilo do título da seção de contato */
+.contato h2 {
   text-align: center;
   margin-bottom: 60px;
 }
 
-.lista-contato{
+/* Estilo da lista de contatos */
+.lista-contato {
   display: flex;
   align-items: center;
-  justify-content: center; /* esse ajuda na vertical também */
+  justify-content: center; /* Garante que os itens sejam centralizados horizontal e verticalmente */
   text-align: center;
-  text-decoration: none;
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid transparent;
-  gap: 40px;
-  
+  gap: 40px; /* Espaçamento entre os itens */
+  flex-wrap: nowrap; /* Não permite que os itens se movam para a linha seguinte */
+  overflow-x: auto; /* Permite rolagem horizontal caso os itens ultrapassem a tela */
 }
 
-.lista-contato li{
+/* Estilo dos itens da lista */
+.lista-contato li {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  flex: 0 0 auto; /* Garante que os itens tenham tamanho fixo */
+  width: 200px; /* Largura fixa para os itens */
 }
 
-.lista-contato li .lista-img{
+/* Estilo da imagem de cada item */
+.lista-contato li .lista-img {
   padding: 30px;
   background-color: var(--cor-4);
   border-radius: 50%;
+  width: 80px; /* Ajuste no tamanho da imagem */
+  height: 80px; /* Tamanho fixo da imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.lista-contato li a>div:hover{
+/* Estilo do efeito de hover para o link */
+.lista-contato li a > div:hover {
   background-color: var(--cor-3);
 }
 
-
-@media (max-width:650px){
-
-  .lista-contato{
-    gap: 40px;
-  }
-  
-  .lista-contato li{
-    flex: 1 1 200px;
+/* Responsividade para telas menores */
+@media (max-width: 650px) {
+  .lista-contato {
+    gap: 20px; /* Reduz o espaçamento entre os itens */
+    flex-wrap: nowrap; /* Garante que os itens continuem na horizontal */
+    justify-content: start; /* Garante alinhamento à esquerda */
   }
 
-  .lista-contato li .lista-img{
-    padding: 15px;
+  .lista-contato li {
+    flex: 0 0 auto; /* Não permite que os itens se estiquem */
+    width: 150px; /* Largura fixa para os itens em telas menores */
+  }
+
+  .lista-contato li .lista-img {
+    padding: 10px; /* Reduz o padding da imagem */
+    width: 60px; /* Ajuste o tamanho da imagem */
+    height: 60px; /* Ajuste o tamanho da imagem */
   }
 }
-
-
-

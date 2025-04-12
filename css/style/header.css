@@ -1,54 +1,112 @@
+/* Garantir que o body ocupe 100% da altura da tela e permitir rolagem */
+html, body {
+  height: 100%; /* Garantir que o body ocupe toda a altura */
+  margin: 0; /* Remove a margem padrão */
+  overflow-y: scroll; /* Sempre exibe a rolagem vertical */
+}
+
+/* Estilo da barra de rolagem com track verde */
+body {
+  scrollbar-width: thin; /* Para Firefox */
+  scrollbar-color: rgb(0, 173, 111) transparent; /* Track verde e thumb invisível */
+}
+
+/* Para navegadores Webkit (Chrome, Safari, Edge) */
+body::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(0, 173, 111); /* Cor verde do track */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent; /* Torna o thumb invisível */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+/* Estilo da sua navbar */
 .header {
   padding-top: 30px;
   padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  flex-wrap: nowrap;
+  gap: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-right: 10px; /* Espaçamento para a barra de rolagem */
+}
 
+.menu a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  white-space: nowrap; /* Impede quebra de linha */
 }
 
 .menu a:hover {
-  color: rgb(0, 173, 111); /* a cor que quiser no hover */
+  color: rgb(0, 173, 111); /* Cor do hover */
 }
 
+/* Barra de rolagem verde para a navbar */
+.menu {
+  scrollbar-width: thin; /* Para Firefox */
+  scrollbar-color: rgb(0, 173, 111) transparent; /* Track verde e thumb invisível */
+}
 
+/* Estilos da barra de rolagem para Webkit (Chrome, Safari, Edge) */
+.menu::-webkit-scrollbar {
+  height: 8px; /* Largura da barra de rolagem */
+}
+
+.menu::-webkit-scrollbar-track {
+  background: rgb(0, 173, 111); /* Fundo verde da barra de rolagem */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background: transparent; /* Torna o thumb invisível */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+/* Responsivo — ajusta tamanhos e espaçamento */
 @media (max-width: 800px) {
-  .menu{
+  .menu {
     gap: 10px;
   }
 
   .menu a {
-    padding: 10px 20px;
+    font-size: 15px;
+    padding: 6px 12px;
+    background-color: var(--cor-4, #00ad6f);
+    color: white;
     border-radius: 4px;
-    font-size: 16px;
-    background-color: var(--cor-4);
-    
   }
 }
 
 @media (max-width: 700px) {
   .header {
     flex-direction: column;
+    gap: 10px;
   }
 }
 
 @media (max-width: 400px) {
-  .menu{
-    gap: 20px 10px;
+  .menu {
+    gap: 8px;
   }
 
-  .menu a{
-    font-size: 14px;
+  .menu a {
+    font-size: 13px;
+    padding: 4px 10px;
   }
 }
-
-
