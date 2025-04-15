@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 .menu {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-right: 10px; /* Espaçamento para a barra de rolagem */
 }

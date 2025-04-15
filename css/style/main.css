@@ -1,4 +1,16 @@
-.main{
+/* Garante que o corpo da página use 100% da altura da viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Grid principal */
+.main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
@@ -7,47 +19,40 @@
   padding-bottom: 80px;
 }
 
-.main-img{
+.main-img {
   margin: auto;
-  
 }
 
-.main-conteudo h1{
+.main-conteudo h1 {
   margin-bottom: 8px;
   position: relative;
 }
 
-
-.main-conteudo span{
+.main-conteudo span {
   display: block;
   margin-bottom: 28px;
 }
 
-.main-conteudo a{
+.main-conteudo a {
   background-color: var(--cor-p1);
-  display: block;
-  max-width: max-content;
+  display: inline-block;
   padding: 12px 24px;
   background: none;
-  padding: 0;
-  display: inline-block;
 }
 
-
-/* Organiza os elementos lado a lado */
+/* Wrapper de conteúdo */
 .main-content-wrapper {
   display: flex;
-  align-items: center; /* Alinha verticalmente */
-  justify-content: space-between; /* Mantém espaçamento entre elementos */
-  flex-wrap: wrap; /* Evita quebra em telas menores */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Mantém o texto e os ícones alinhados à esquerda */
 .main-conteudo {
   flex: 1;
 }
 
-/* Mantém os ícones lado a lado */
+/* Ícones sociais */
 .social-links {
   display: flex;
   gap: 15px;
@@ -55,84 +60,74 @@
   align-items: center;
 }
 
-/* Define tamanho dos ícones */
 .github-icon, .linkedin-icon {
   width: 50px;
   transition: transform 0.3s ease-in-out;
 }
 
-/* Efeito ao passar o mouse */
 .github-link:hover .github-icon,
 .linkedin-link:hover .linkedin-icon {
   transform: scale(1.2);
 }
 
-/* Mantém a imagem no lado direito */
 .main-img img {
   max-width: 100%;
   height: auto;
 }
 
-
-
-@media (max-width:900px){
-  .main h1{
+/* Responsividade */
+@media (max-width: 900px) {
+  .main h1 {
     font-size: 52px;
   }
-  .main span{
+
+  .main span {
     font-size: 18px;
   }
 }
 
-@media (max-width:700px){
-  .main{
+@media (max-width: 700px) {
+  .main {
     grid-template-columns: 1fr;
     padding-top: 40px;
     justify-items: center;
   }
 
-  .main-img{
+  .main-img {
     display: none;
   }
 
-  .main-conteudo a{
+  .main-conteudo a {
     padding: 8px 16px;
   }
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  position: relative; /* Garante que o conteúdo fique acima do canvas */
-}
-
-/* O Canvas cobre toda a tela sem interferir nos elementos */
+/* Canvas de fundo */
 canvas {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1; /* Mantém o canvas no fundo */
-  pointer-events: none; /* Evita que o canvas afete o conteúdo */
+  z-index: -1;
+  pointer-events: none;
 }
 
-/* Ajuste para o conteúdo ficar sempre acima do fundo */
+/* Garante que conteúdo fique acima do canvas */
 header, section {
   position: relative;
-  z-index: 1; /* Mantém os elementos visíveis sobre o canvas */
+  z-index: 1;
   padding: 20px;
 }
 
-/* Estilização opcional para o layout */
+/* Layout opcional */
 section {
   padding: 50px;
 }
 
-/* Efeito do cursor piscando */
+/* Cursor piscando */
 #typing-text::after {
-  content: "|"; /* Cursor */
+  content: "|";
   display: inline-block;
   animation: blink 0.7s infinite alternate;
 }

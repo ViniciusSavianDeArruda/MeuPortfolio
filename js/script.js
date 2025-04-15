@@ -5,65 +5,77 @@ new SimpleAnime();
 initTooltip();
 initMostrarGotop();
 
-
 const canvas = document.getElementById("starCanvas");
 const ctx = canvas.getContext("2d");
 
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
+let stars = [];
+const numStars = 200;
 
-resizeCanvas();
-
-const stars = [];
-const numStars = 200; // Número de estrelas
-
-// Criar estrelas com posição e movimento aleatório
-for (let i = 0; i < numStars; i++) {
+function createStars() {
+  stars = [];
+  for (let i = 0; i < numStars; i++) {
     stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.random() * 2, // Tamanho da estrela
-        speedX: (Math.random() - 0.5) * 0.3, // Movimento horizontal
-        speedY: (Math.random() - 0.5) * 0.3  // Movimento vertical
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2,
+      speedX: (Math.random() - 0.5) * 0.3,
+      speedY: (Math.random() - 0.5) * 0.3,
     });
+  }
 }
 
-// Desenhar as estrelas
+function resizeCanvas() {
+  const oldWidth = canvas.width;
+  const oldHeight = canvas.height;
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // Reposiciona proporcionalmente
+  stars.forEach(star => {
+    star.x = star.x * (canvas.width / oldWidth);
+    star.y = star.y * (canvas.height / oldHeight);
+  });
+}
+
 function drawStars() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "white";
-    
-    stars.forEach(star => {
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fill();
-    });
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
+
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    ctx.fill();
+  });
 }
 
-// Animar as estrelas
 function animateStars() {
-    drawStars();
-    
-    stars.forEach(star => {
-        star.x += star.speedX;
-        star.y += star.speedY;
+  drawStars();
 
-        // Se sair da tela, reaparece do outro lado
-        if (star.x < 0) star.x = canvas.width;
-        if (star.x > canvas.width) star.x = 0;
-        if (star.y < 0) star.y = canvas.height;
-        if (star.y > canvas.height) star.y = 0;
-    });
+  stars.forEach(star => {
+    star.x += star.speedX;
+    star.y += star.speedY;
 
-    requestAnimationFrame(animateStars);
+    // Loop infinito de movimento
+    if (star.x < 0) star.x = canvas.width;
+    if (star.x > canvas.width) star.x = 0;
+    if (star.y < 0) star.y = canvas.height;
+    if (star.y > canvas.height) star.y = 0;
+  });
+
+  requestAnimationFrame(animateStars);
 }
 
+// Inicialização
+resizeCanvas();
+createStars();
 animateStars();
 
-// Redimensionar o canvas se a janela mudar de tamanho
-window.addEventListener("resize", resizeCanvas);
+// Atualiza tamanho da tela e ajusta estrelas
+window.addEventListener("resize", () => {
+  resizeCanvas();
+});
+
 
 
 
