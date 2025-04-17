@@ -110,6 +110,13 @@ function typeText() {
 typeText();
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const ano = new Date().getFullYear();
+  document.getElementById("ano-atual").textContent = ano;
+});
+
+
+
 // Atualização apenas para mostrar novo commit no GitHub
 
 
