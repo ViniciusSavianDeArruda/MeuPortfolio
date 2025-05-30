@@ -1,5 +1,8 @@
 # 🚀 Meu Portfólio Pessoal
 
+<img src="https://github.com/user-attachments/assets/1c657a1e-1c00-4c92-81a3-bbaa98c08769" alt="Imagem do site" width="900"/>
+
+
 Bem-vindo ao meu portfólio!  
 Aqui você vai encontrar informações sobre mim, meus projetos reais e habilidades
 
