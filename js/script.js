@@ -117,6 +117,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const statusDiv = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusDiv.textContent = 'Enviando...';
+
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        statusDiv.textContent = 'Mensagem enviada com sucesso! 🙌';
+        form.reset();
+      } else {
+        const err = await response.json();
+        statusDiv.textContent = err.error || 'Erro ao enviar. Tente mais tarde.';
+      }
+    } catch (error) {
+      statusDiv.textContent = 'Erro de rede. Verifique sua conexão.';
+    }
+  });
+});
+
+
+
+
 // Atualização apenas para mostrar novo commit no GitHub
 
 

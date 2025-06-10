@@ -126,26 +126,57 @@
     </div>
   </article>
 
-  <article class="contato container" id="contato">
-    <h2 class="font-1-gg-m cor-0" style="color:rgb(0, 173, 111);">Contato<span class="cor-p1"></span></h2>
-    <div>
-      <ul class="lista-contato">
-        <li>
-          <a href="mailto:arrudavinicius283@gmail.com" class="contato-item" target="_blank">
-            <div class="lista-img"><img src="img/icones/icons8-mail.svg" alt="Email"></div>
-            <p class="cor-0 font-1-m-b" style="color: rgb(0, 173, 111);">E-mail</p>
-          </a>
-        </li>
+<<section id="contact" class="contact-section">
+  <div class="container">
+    <h2>Contato</h2>
+    <form 
+      action="https://formsubmit.co/" 
+      method="POST" 
+      class="contact-form"
+    >
+      <!-- Desative o captcha se não quiser usar -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirecione para página de obrigado após envio (opcional) -->
+      <input type="hidden" name="_next" value="https://seu-site.com/obrigado.html">
 
-        <li>
-          <a href="https://wa.me/5555999849561?text=Olá!%20Vim%20pelo%20seu%20portfólio%20e%20gostaria%20de%20falar%20com%20você" class="contato-item" target="_blank">
-          <div class="lista-img"><img src="img/icones/icons8-whatsapp.svg" alt="WhatsApp"></div>
-          <p class="cor-0 font-1-m-b" style="color: rgb(0, 173, 111);">WhatsApp</p>
-        </a>
-        </li>
-      </ul>
-    </div>
-  </article>
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          placeholder="Seu nome"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="seu@exemplo.com"
+        >
+      </div>
+
+      <div class="form-group full-width">
+        <label for="message">Mensagem</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="6" 
+          required 
+          placeholder="Escreva sua mensagem..."
+        ></textarea>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
 
   <footer class="footer-bg">
     <div class="cor-0 font-1-p container footer">
