@@ -41,7 +41,7 @@
 
 .projetos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -253,32 +253,78 @@
 }
 
 /* Responsividade */
+@media (max-width: 1200px) {
+  .projetos-grid {
+    max-width: 900px;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .projetos {
+    padding: 100px 0;
+  }
+  
+  .projetos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .projeto-card {
+    padding: 25px;
+  }
+  
+  .projeto-placeholder {
+    height: 180px;
+  }
+}
+
 @media (max-width: 768px) {
   .projetos {
     padding: 80px 0;
   }
   
+  .projetos h2 {
+    margin-bottom: 60px;
+  }
+  
+  .projetos-intro {
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+  
   .projetos-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 10px;
   }
   
   .projeto-card {
-    padding: 25px 20px;
+    padding: 20px;
   }
   
   .projeto-placeholder {
-    height: 160px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .projeto-placeholder svg {
+    width: 70px;
+    height: 70px;
   }
   
   .projeto-links {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 12px;
   }
   
   .projeto-btn {
+    flex: 1;
+    min-width: 120px;
     justify-content: center;
+    padding: 10px 16px;
+    font-size: 13px;
   }
   
   .projetos-intro p {
@@ -286,7 +332,7 @@
   }
   
   .projeto-conteudo h3 {
-    font-size: 20px;
+    font-size: 19px;
   }
   
   .projeto-conteudo p {
@@ -294,7 +340,29 @@
   }
   
   .projeto-tech {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+  
+  .projeto-status {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 5px;
+  }
+  
+  .projeto-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .projeto-btn {
+    flex: none;
+    width: 100%;
   }
 }
 
@@ -304,58 +372,121 @@
   }
   
   .projetos h2 {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
   
   .projetos-intro {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    padding: 0 5px;
   }
   
   .projetos-intro p {
-    font-size: 15px;
+    font-size: 14px;
   }
   
   .projetos-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 18px;
   }
   
   .projeto-card {
-    padding: 20px 15px;
+    padding: 18px 15px;
   }
   
   .projeto-placeholder {
-    height: 140px;
-    margin-bottom: 20px;
+    height: 130px;
+    margin-bottom: 18px;
   }
   
   .projeto-placeholder svg {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
   
   .projeto-conteudo h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
+    font-size: 17px;
+    margin-bottom: 10px;
   }
   
   .projeto-conteudo p {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  
+  .projeto-btn {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+  
+  .projeto-status {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+  
+  .tech-tag {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .projetos {
+    padding: 50px 0;
+  }
+  
+  .projetos h2 {
+    margin-bottom: 40px;
+  }
+  
+  .projetos-intro {
+    margin-bottom: 30px;
+  }
+  
+  .projetos-grid {
+    gap: 15px;
+  }
+  
+  .projeto-card {
+    padding: 15px 12px;
+  }
+  
+  .projeto-placeholder {
+    height: 120px;
+    margin-bottom: 15px;
+  }
+  
+  .projeto-placeholder svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .projeto-conteudo h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .projeto-conteudo p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .projeto-tech {
+    margin-bottom: 15px;
+    gap: 6px;
+  }
+  
+  .tech-tag {
+    font-size: 8px;
+    padding: 2px 5px;
   }
   
   .projeto-btn {
     padding: 10px 16px;
-    font-size: 13px;
-  }
-  
-  .projeto-status {
-    padding: 5px 12px;
     font-size: 11px;
   }
   
-  .tech-tag {
-    font-size: 10px;
+  .projeto-status {
     padding: 3px 8px;
+    font-size: 9px;
   }
 }
