@@ -100,6 +100,7 @@ body::-webkit-scrollbar-thumb:hover {
   padding-top: 120px;
   padding-bottom: 120px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 /* Seções com espaçamento melhorado */
@@ -148,6 +149,8 @@ section::before {
     padding-top: 60px;
     padding-left: 16px;
     padding-right: 16px;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -157,6 +160,8 @@ section::before {
     padding-top: 40px;
     padding-left: 12px;
     padding-right: 12px;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -164,6 +169,8 @@ section::before {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
+    max-width: 100%;
   }
 }
 

@@ -166,6 +166,8 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .projeto-btn::before {
@@ -320,11 +322,13 @@
   }
   
   .projeto-btn {
-    flex: 1;
-    min-width: 120px;
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+    max-width: calc(50% - 6px);
     justify-content: center;
     padding: 10px 16px;
     font-size: 13px;
+    box-sizing: border-box;
   }
   
   .projetos-intro p {
@@ -358,11 +362,14 @@
   .projeto-links {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
   }
   
   .projeto-btn {
     flex: none;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -416,6 +423,9 @@
   .projeto-btn {
     padding: 12px 20px;
     font-size: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .projeto-status {
@@ -483,6 +493,9 @@
   .projeto-btn {
     padding: 10px 16px;
     font-size: 11px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .projeto-status {
