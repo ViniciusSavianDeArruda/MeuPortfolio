@@ -162,10 +162,6 @@
     text-align: center;
   }
   
-  .main-img {
-    order: -1;
-  }
-  
   .main-img img {
     max-width: 400px;
   }
