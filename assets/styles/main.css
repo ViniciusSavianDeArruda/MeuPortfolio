@@ -1,0 +1,20 @@
+/* ==========================================================================
+   PORTFOLIO STYLES - MAIN STYLESHEET
+   ========================================================================== */
+
+/* Base Styles */
+@import "base/reset.css";
+@import "base/global.css";
+@import "base/cores.css";
+@import "base/tipografia.css";
+@import "base/plugin.css";
+@import "base/tooltip.css";
+
+/* Component Styles */
+@import "components/header.css";
+@import "components/main.css";
+@import "components/sobre.css";
+@import "components/skills.css";
+@import "components/projetos.css";
+@import "components/contato.css";
+@import "components/footer.css";

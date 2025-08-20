@@ -65,30 +65,24 @@ Olá! Me chamo **Vinicius Savian de Arruda**, sou estudante de **Sistemas de Inf
 
 ```
 portfolio/
-├── 📁 css/
-│   ├── 📁 global/
-│   │   ├── cores.css          # Sistema de cores
-│   │   ├── global.css         # Estilos globais
-│   │   ├── reset.css          # Reset CSS
-│   │   ├── tipografia.css     # Sistema tipográfico
-│   │   └── plugin.css         # Plugins e animações
-│   └── 📁 style/
-│       ├── header.css         # Cabeçalho
-│       ├── main.css           # Seção principal
-│       ├── sobre.css          # Seção sobre
-│       ├── skills.css         # Habilidades
-│       ├── projetos.css       # Projetos
-│       ├── contato.css        # Formulário de contato
-│       └── footer.css         # Rodapé
-├── 📁 js/
-│   ├── 📁 modules/
-│   │   ├── gotop.js           # Botão voltar ao topo
-│   │   └── tooltip.js         # Tooltips
-│   ├── 📁 plugins/
-│   │   └── simple-anime.js    # Animações
-│   └── script.js              # Script principal
-├── 📁 img/                    # Imagens e ícones
+├── 📁 assets/                     # Recursos estáticos
+│   ├── 📁 images/                 # Imagens e ícones
+│   │   ├── 📁 icons/              # Ícones SVG
+│   │   ├── 📁 skills/             # Ícones de tecnologias
+│   │   ├── 📁 profile/            # Fotos pessoais
+│   │   └── hero-animation.svg     # Animação da seção principal
+│   ├── 📁 styles/                 # Arquivos CSS
+│   │   ├── 📁 base/               # Estilos base (reset, global, cores, etc.)
+│   │   ├── 📁 components/         # Estilos de componentes
+│   │   └── main.css               # Arquivo principal de estilos
+│   ├── 📁 scripts/                # Arquivos JavaScript
+│   │   ├── 📁 modules/            # Módulos JavaScript
+│   │   ├── 📁 utils/              # Utilitários e bibliotecas
+│   │   └── main.js                # Script principal
+│   └── 📁 documents/              # Documentos (CV, etc.)
+├── 📁 docs/                       # Documentação do projeto
 ├── index.html                 # Página principal
+├── .gitignore                 # Arquivos ignorados pelo Git
 └── README.md                  # Documentação
 ```
 
