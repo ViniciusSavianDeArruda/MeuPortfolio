@@ -168,6 +168,8 @@
   overflow: hidden;
   box-sizing: border-box;
   max-width: 100%;
+  min-width: 120px;
+  justify-content: center;
 }
 
 .projeto-btn::before {

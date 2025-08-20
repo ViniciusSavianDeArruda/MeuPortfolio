@@ -103,6 +103,24 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
 }
 
+/* Melhor responsividade geral */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
 /* Seções com espaçamento melhorado */
 section {
   position: relative;
@@ -147,10 +165,19 @@ section::before {
   .container {
     padding-bottom: 60px;
     padding-top: 60px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -158,8 +185,8 @@ section::before {
   .container {
     padding-bottom: 40px;
     padding-top: 40px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
     width: 100%;
     max-width: 100%;
   }
@@ -167,8 +194,10 @@ section::before {
 
 @media (max-width: 360px) {
   .container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     width: 100%;
     max-width: 100%;
   }
