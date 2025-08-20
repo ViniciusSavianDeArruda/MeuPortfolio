@@ -6,7 +6,7 @@
   "scripts": {
     "start": "serve .",
     "dev": "serve . -l 3000",
-    "build": "echo 'Static site ready for deployment'",
+    "build": "mkdir -p dist && cp -r * dist/ 2>/dev/null || true",
     "preview": "serve . -l 4173"
   },
   "keywords": [
