@@ -86,45 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Formulário de contato melhorado
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.contact-form');
-  const statusDiv = document.getElementById('form-status');
-
-  if (form && statusDiv) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      statusDiv.textContent = 'Enviando...';
-      statusDiv.classList.add('show');
-
-      const data = new FormData(form);
-      
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        
-        if (response.ok) {
-          statusDiv.textContent = 'Mensagem enviada com sucesso! 🙌';
-          form.reset();
-        } else {
-          const err = await response.json();
-          statusDiv.textContent = err.error || 'Erro ao enviar. Tente mais tarde.';
-        }
-      } catch (error) {
-        statusDiv.textContent = 'Erro de rede. Verifique sua conexão.';
-      }
-      
-      setTimeout(() => {
-        statusDiv.classList.remove('show');
-      }, 5000);
-    });
-  }
-});
-
 // Scroll suave melhorado
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {

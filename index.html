@@ -274,31 +274,69 @@
   <!-- Seção Contato -->
   <section id="contato" class="contact-section">
     <div class="contact-container">
-      <h2 class="font-1-gg-b" data-anime="200">Entre em Contato</h2>
-      <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST" data-anime="400">
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+      <h2 class="font-1-gg-b" data-anime="200">Vamos Conversar?</h2>
+      <div class="contact-content" data-anime="400">
+        <div class="contact-intro">
+          <p>
+            Estou sempre aberto a novas oportunidades, colaborações e conversas interessantes. 
+            Entre em contato comigo através dos canais abaixo!
+          </p>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        
+        <div class="contact-methods">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="rgb(0, 173, 111)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="22,6 12,13 2,6" stroke="rgb(0, 173, 111)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Email</h3>
+            <p>Para propostas profissionais e colaborações</p>
+            <a href="mailto:viniciussavian@gmail.com" class="contact-btn">
+              viniciussavian@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8Z" stroke="rgb(0, 173, 111)" stroke-width="2"/>
+                <path d="M12 14C16.4183 14 20 17.5817 20 22H4C4 17.5817 7.58172 14 12 14Z" stroke="rgb(0, 173, 111)" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Vamos nos conectar profissionalmente</p>
+            <a href="https://www.linkedin.com/in/arrudavinicius/" target="_blank" class="contact-btn">
+              Ver Perfil
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 19C4 20.5 4 16.5 2 16M22 16V22C22 22 17 20 12 22C7 20 2 22 2 22V16C2 16 7 14 12 16C17 14 22 16 22 16Z" stroke="rgb(0, 173, 111)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>GitHub</h3>
+            <p>Confira meus projetos e contribuições</p>
+            <a href="https://github.com/ViniciusSavianDeArruda" target="_blank" class="contact-btn">
+              Ver Repositórios
+            </a>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="subject">Assunto</label>
-          <input type="text" id="subject" name="subject" required placeholder="Assunto da mensagem">
+
+        <div class="contact-cta">
+          <h3>Pronto para começar um projeto?</h3>
+          <p>Vamos transformar suas ideias em realidade digital!</p>
+          <a href="mailto:viniciussavian@gmail.com?subject=Proposta de Projeto" class="cta-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Enviar Email
+          </a>
         </div>
-        <div class="form-group">
-          <label for="message">Mensagem</label>
-          <textarea id="message" name="message" required placeholder="Escreva sua mensagem aqui..."></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Enviar Mensagem</button>
-        <div id="form-status"></div>
-      </form>
-      <div class="contact-info">
-        <p>
-          Estou sempre aberto a novas oportunidades e colaborações. Vamos conversar sobre seu próximo projeto!
-        </p>
       </div>
     </div>
   </section>
