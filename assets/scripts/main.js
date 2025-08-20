@@ -130,24 +130,15 @@ document.querySelectorAll('.projeto-card, .skill-item, .sobre-img, .sobre-conteu
 });
 
 // Animações das barras de progresso das skills
-const animateSkillBars = () => {
-  const skillBars = document.querySelectorAll('.skill-progress');
-  const circularBars = document.querySelectorAll('.progress-ring-bar');
+// Animações especiais para skills cards
+const animateSkillCards = () => {
+  const skillCards = document.querySelectorAll('.skill-card');
   
-  skillBars.forEach(bar => {
-    const level = bar.getAttribute('data-level');
+  skillCards.forEach((card, index) => {
     setTimeout(() => {
-      bar.style.width = level + '%';
-    }, 500);
-  });
-  
-  circularBars.forEach(bar => {
-    const level = bar.getAttribute('data-level');
-    const circumference = 2 * Math.PI * 40; // r = 40
-    const offset = circumference - (level / 100) * circumference;
-    setTimeout(() => {
-      bar.style.strokeDashoffset = offset;
-    }, 500);
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, index * 100);
   });
 };
 
@@ -155,7 +146,6 @@ const animateSkillBars = () => {
 const skillsObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      animateSkillBars();
       skillsObserver.unobserve(entry.target);
     }
   });
