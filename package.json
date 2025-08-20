@@ -6,7 +6,7 @@
   "scripts": {
     "start": "serve .",
     "dev": "serve . -l 3000",
-    "build": "echo 'Static site - no build needed'",
+    "build": "echo 'Static site ready for deployment'",
     "preview": "serve . -l 4173"
   },
   "keywords": [
