@@ -129,6 +129,43 @@ document.querySelectorAll('.projeto-card, .skill-item, .sobre-img, .sobre-conteu
   observer.observe(el);
 });
 
+// Animações das barras de progresso das skills
+const animateSkillBars = () => {
+  const skillBars = document.querySelectorAll('.skill-progress');
+  const circularBars = document.querySelectorAll('.progress-ring-bar');
+  
+  skillBars.forEach(bar => {
+    const level = bar.getAttribute('data-level');
+    setTimeout(() => {
+      bar.style.width = level + '%';
+    }, 500);
+  });
+  
+  circularBars.forEach(bar => {
+    const level = bar.getAttribute('data-level');
+    const circumference = 2 * Math.PI * 40; // r = 40
+    const offset = circumference - (level / 100) * circumference;
+    setTimeout(() => {
+      bar.style.strokeDashoffset = offset;
+    }, 500);
+  });
+};
+
+// Observer para skills
+const skillsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateSkillBars();
+      skillsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const skillsSection = document.querySelector('.minhas-skills');
+if (skillsSection) {
+  skillsObserver.observe(skillsSection);
+}
+
 // Efeito de hover nos cards de projeto
 document.addEventListener('DOMContentLoaded', () => {
   const projectCards = document.querySelectorAll('.projeto-card');
