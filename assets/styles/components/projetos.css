@@ -168,9 +168,9 @@
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  flex: 1;
-  min-width: 130px;
-  max-width: 150px;
+  flex: 0 1 auto;
+  min-width: 140px;
+  white-space: nowrap;
   justify-content: center;
 }
 
