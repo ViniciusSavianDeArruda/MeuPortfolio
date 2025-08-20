@@ -183,184 +183,6 @@
   text-shadow: 0 0 10px rgba(0, 173, 111, 0.5);
 }
 
-/* Diamond Style */
-.skill-card.diamond {
-  background: transparent;
-  border: none;
-}
-
-.diamond-shape {
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(135deg, rgba(0, 173, 111, 0.2), rgba(4, 255, 110, 0.1));
-  transform: rotate(45deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s ease;
-  border: 2px solid rgba(0, 173, 111, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.diamond-shape::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(0, 173, 111, 0.1), transparent);
-  transform: rotate(45deg);
-  transition: all 0.5s ease;
-}
-
-.skill-card.diamond:hover .diamond-shape {
-  transform: rotate(45deg) scale(1.1);
-  background: linear-gradient(135deg, rgba(0, 173, 111, 0.4), rgba(4, 255, 110, 0.2));
-  border-color: rgb(0, 173, 111);
-  box-shadow: 0 0 30px rgba(0, 173, 111, 0.5);
-}
-
-.skill-card.diamond:hover .diamond-shape::before {
-  animation: diamondShine 2s infinite;
-}
-
-@keyframes diamondShine {
-  0% { transform: rotate(45deg) translateX(-100%); }
-  100% { transform: rotate(45deg) translateX(100%); }
-}
-
-.diamond-shape .skill-icon {
-  transform: rotate(-45deg);
-  width: 50px;
-  height: 50px;
-}
-
-/* Neon Style */
-.skill-card.neon {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 173, 111, 0.3);
-}
-
-.neon-border {
-  position: relative;
-  padding: 20px;
-  border-radius: 15px;
-  background: rgba(0, 173, 111, 0.05);
-  border: 2px solid rgba(0, 173, 111, 0.3);
-  transition: all 0.4s ease;
-}
-
-.neon-border::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, rgb(0, 173, 111), #04FF6E, rgb(0, 173, 111));
-  border-radius: 15px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
-}
-
-.skill-card.neon:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 173, 111, 0.4);
-}
-
-.skill-card.neon:hover .neon-border {
-  border-color: rgb(0, 173, 111);
-  box-shadow: 
-    0 0 20px rgba(0, 173, 111, 0.5),
-    inset 0 0 20px rgba(0, 173, 111, 0.1);
-}
-
-.skill-card.neon:hover .neon-border::before {
-  opacity: 1;
-  animation: neonPulse 2s infinite;
-}
-
-@keyframes neonPulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
-/* Hexagon Style */
-.skill-card.hexagon {
-  background: transparent;
-  border: none;
-}
-
-.hexagon-shape {
-  width: 100px;
-  height: 100px;
-  background: rgba(0, 173, 111, 0.15);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s ease;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  border: 2px solid rgba(0, 173, 111, 0.3);
-}
-
-.skill-card.hexagon:hover .hexagon-shape {
-  background: rgba(0, 173, 111, 0.3);
-  transform: rotate(15deg) scale(1.1);
-  box-shadow: 0 0 40px rgba(0, 173, 111, 0.6);
-  border-color: rgb(0, 173, 111);
-}
-
-.hexagon-shape .skill-icon {
-  width: 50px;
-  height: 50px;
-  z-index: 2;
-}
-
-/* Morphism Style */
-.skill-card.morphism {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.morphism-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.morphism-glow {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, rgba(0, 173, 111, 0.3), transparent);
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-.skill-card.morphism:hover {
-  transform: translateY(-12px) scale(1.03);
-  background: linear-gradient(145deg, rgba(0, 173, 111, 0.1), rgba(0, 173, 111, 0.05));
-  border-color: rgba(0, 173, 111, 0.4);
-  box-shadow: 
-    0 20px 60px rgba(0, 173, 111, 0.3),
-    inset 0 1px 0 rgba(0, 173, 111, 0.2);
-}
-
-.skill-card.morphism:hover .morphism-glow {
-  opacity: 1;
-  transform: scale(1.2);
-}
-
 /* Tooltips */
 .skill-tooltip {
   position: absolute;
@@ -530,18 +352,6 @@
     font-size: 15px;
   }
   
-  .hexagon-shape,
-  .diamond-shape {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .hexagon-shape .skill-icon,
-  .diamond-shape .skill-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
   .skills-intro p {
     font-size: 16px;
   }
@@ -608,18 +418,6 @@
     font-size: 14px;
   }
   
-  .hexagon-shape,
-  .diamond-shape {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .hexagon-shape .skill-icon,
-  .diamond-shape .skill-icon {
-    width: 35px;
-    height: 35px;
-  }
-  
   .skills-summary {
     margin-top: 80px;
   }
@@ -662,18 +460,6 @@
   
   .skill-name {
     font-size: 13px;
-  }
-  
-  .hexagon-shape,
-  .diamond-shape {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .hexagon-shape .skill-icon,
-  .diamond-shape .skill-icon {
-    width: 30px;
-    height: 30px;
   }
   
   .summary-card {
