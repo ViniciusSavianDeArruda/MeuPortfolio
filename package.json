@@ -1,0 +1,33 @@
+{
+  "name": "portfolio-vinicius-arruda",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal de Vinicius Savian de Arruda - Desenvolvedor Web",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve . -l 3000",
+    "build": "echo 'Static site - no build needed'",
+    "preview": "serve . -l 4173"
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "frontend",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Vinicius Savian de Arruda",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ViniciusSavianDeArruda/portfolio.git"
+  },
+  "homepage": "https://meu-portfolio-rho-five.vercel.app/",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
