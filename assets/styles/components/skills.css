@@ -44,7 +44,7 @@
 .skills-categories {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -92,7 +92,7 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+  gap: 8px;
   justify-items: center;
 }
 
@@ -102,12 +102,12 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 15px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   position: relative;
   border-radius: 20px;
-  min-height: 140px;
+  min-height: 120px;
   justify-content: center;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
@@ -303,11 +303,11 @@
 @media (max-width: 1024px) {
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
+    gap: 6px;
   }
   
   .skills-categories {
-    gap: 50px;
+    gap: 30px;
   }
 }
 
@@ -317,7 +317,7 @@
   }
   
   .skills-categories {
-    gap: 40px;
+    gap: 25px;
   }
   
   .category-title {
@@ -331,12 +331,12 @@
   
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    gap: 5px;
   }
   
   .skill-card {
-    padding: 18px;
-    min-height: 120px;
+    padding: 12px;
+    min-height: 100px;
   }
   
   .skill-icon {
@@ -383,7 +383,7 @@
   }
   
   .skills-categories {
-    gap: 35px;
+    gap: 20px;
   }
   
   .category-title {
@@ -397,12 +397,12 @@
   
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 8px;
+    gap: 4px;
   }
   
   .skill-card {
-    padding: 15px;
-    min-height: 100px;
+    padding: 10px;
+    min-height: 85px;
   }
   
   .skill-icon {
@@ -441,12 +441,12 @@
 @media (max-width: 360px) {
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 6px;
+    gap: 3px;
   }
   
   .skill-card {
-    padding: 12px;
-    min-height: 90px;
+    padding: 8px;
+    min-height: 80px;
   }
   
   .skill-icon {
