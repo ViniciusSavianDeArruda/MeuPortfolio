@@ -455,10 +455,7 @@
   }
   
   .skill-tooltip {
-    font-size: 12px;
-    padding: 8px 12px;
-    white-space: normal;
-    max-width: 140px;
+    display: none !important;
   }
 }
 
@@ -538,8 +535,6 @@
   }
   
   .skill-tooltip {
-    font-size: 11px;
-    padding: 7px 10px;
-    max-width: 130px;
+    display: none !important;
   }
 }
