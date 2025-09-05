@@ -80,8 +80,16 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+  gap: 25px;
   justify-items: center;
+}
+
+/* Seção específica de ferramentas com ícones mais próximos */
+.skill-category:last-child .skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Base Skill Card */
@@ -285,6 +293,12 @@
     gap: 12px;
   }
   
+  .skill-category:last-child .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    max-width: 500px;
+  }
+  
   .skills-categories {
     gap: 50px;
   }
@@ -349,6 +363,12 @@
 @media (max-width: 480px) {
   .minhas-skills {
     padding: 60px 0;
+  }
+  
+  .skill-category:last-child .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 350px;
   }
   
   .minhas-skills .container {
@@ -432,6 +452,12 @@
     padding-left: 12px;
     padding-right: 12px;
     max-width: 100%;
+  }
+  
+  .skill-category:last-child .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    max-width: 300px;
   }
   
   .minhas-skills h2 {
