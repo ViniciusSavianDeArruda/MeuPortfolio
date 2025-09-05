@@ -94,9 +94,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: radial-gradient(1200px 600px at -10% -20%, rgba(0,173,111,0.18), transparent 45%),
-              radial-gradient(900px 500px at 120% 120%, rgba(46,230,166,0.15), transparent 40%),
-              linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   overflow: hidden;
