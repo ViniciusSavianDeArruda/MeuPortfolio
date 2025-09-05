@@ -415,27 +415,21 @@
   }
   
   .projeto-slide {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-    padding: 30px;
-  }
-  
-  .projeto-info {
-    padding-left: 0;
+    padding: 25px 20px;
+    gap: 25px;
   }
   
   .projeto-visual {
-    min-height: 250px;
+    min-height: 220px;
   }
   
   .projeto-icon {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
   
   .projeto-info h3 {
-    font-size: 28px;
+    font-size: 26px;
   }
   
   .projeto-info p {
@@ -443,18 +437,16 @@
   }
 }
 
-@media (max-width: 768px) {
-  .projetos {
-    padding: 80px 0;
-  }
-  
-  .carousel-container {
-    padding: 0 20px;
-  }
-  
+@media (max-width: 900px) {
   .projeto-slide {
-    padding: 25px 20px;
+    flex-direction: column;
+    text-align: center;
     gap: 25px;
+    padding: 25px 20px;
+  }
+  
+  .projeto-info {
+    padding-left: 0;
   }
   
   .projeto-visual {
@@ -468,12 +460,76 @@
   
   .projeto-info h3 {
     font-size: 24px;
-    margin-bottom: 15px;
   }
   
   .projeto-info p {
     font-size: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .projetos {
+    padding: 80px 0;
+  }
+  
+  .projetos h2 {
+    margin-bottom: 60px;
+  }
+  
+  .projetos-intro {
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+  
+  .projetos-intro p {
+    font-size: 16px;
+  }
+  
+  .carousel-container {
+    padding: 0 20px;
+  }
+  
+  .projeto-slide {
+    padding: 20px 15px;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .projeto-info {
+    padding-left: 0;
+  }
+  
+  .projeto-visual {
+    min-height: 180px;
+  }
+  
+  .projeto-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .projeto-info h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .projeto-info p {
+    font-size: 14px;
     margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .projeto-tech {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  
+  .tech-tag {
+    padding: 6px 12px;
+    font-size: 11px;
   }
   
   .projeto-links {
@@ -486,7 +542,7 @@
     width: 100%;
     justify-content: center;
     padding: 12px 24px;
-    font-size: 14px;
+    font-size: 15px;
   }
   
   .carousel-controls {
@@ -511,54 +567,55 @@
   }
   
   .projetos h2 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   
   .projetos-intro {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     padding: 0 10px;
   }
   
   .projetos-intro p {
-    font-size: 15px;
+    font-size: 14px;
   }
   
   .carousel-container {
-    padding: 0 15px;
+    padding: 0 10px;
   }
   
   .projeto-slide {
-    padding: 20px 15px;
-    gap: 20px;
+    padding: 18px 12px;
+    gap: 18px;
   }
   
   .projeto-visual {
-    min-height: 180px;
+    min-height: 160px;
   }
   
   .projeto-icon {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   
   .projeto-info h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 12px;
   }
   
   .projeto-info p {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 18px;
+    line-height: 1.5;
   }
   
   .tech-tag {
-    padding: 6px 12px;
+    padding: 5px 10px;
     font-size: 10px;
   }
   
   .projeto-btn {
     padding: 10px 20px;
-    font-size: 13px;
+    font-size: 14px;
   }
   
   .carousel-controls {
@@ -584,28 +641,32 @@
 
 @media (max-width: 360px) {
   .carousel-container {
-    padding: 0 10px;
+    padding: 0 8px;
   }
   
   .projeto-slide {
-    padding: 18px 12px;
+    padding: 15px 10px;
+    gap: 15px;
   }
   
   .projeto-visual {
-    min-height: 160px;
+    min-height: 140px;
   }
   
   .projeto-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   
   .projeto-info h3 {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 10px;
   }
   
   .projeto-info p {
-    font-size: 13px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    line-height: 1.4;
   }
   
   .tech-tag {
@@ -615,7 +676,27 @@
   
   .projeto-btn {
     padding: 8px 16px;
-    font-size: 12px;
+    font-size: 13px;
+  }
+  
+  .carousel-controls {
+    gap: 12px;
+    margin-top: 25px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
   }
 }
 
