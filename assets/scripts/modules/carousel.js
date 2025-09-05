@@ -39,7 +39,7 @@ export default function initCarousel() {
     }
 
     // Mover o track
-    const translateX = -slideIndex * 100;
+    const translateX = -slideIndex * 33.333;
     track.style.transform = `translateX(${translateX}%)`;
 
     currentSlide = slideIndex;
