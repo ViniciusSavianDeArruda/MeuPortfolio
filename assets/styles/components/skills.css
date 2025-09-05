@@ -79,8 +79,8 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
   justify-items: center;
 }
 
@@ -139,14 +139,7 @@
 }
 
 .skill-card:hover {
-  transform: translateY(-15px) scale(1.05);
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.skill-card:hover::before {
-  opacity: 1;
+  transform: translateY(-5px);
 }
 
 .skill-icon-container {
@@ -157,37 +150,12 @@
   z-index: 2;
 }
 
-.skill-ripple {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 173, 111, 0.2), transparent);
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.6s ease;
-}
-
-.skill-card:hover .skill-ripple {
-  opacity: 1;
-  transform: scale(1);
-  animation: rippleEffect 1.5s infinite;
-}
-
-@keyframes rippleEffect {
-  0% { transform: scale(1); opacity: 0.3; }
-  50% { transform: scale(1.2); opacity: 0.1; }
-  100% { transform: scale(1.4); opacity: 0; }
-}
-
 .skill-card:hover .skill-icon {
-  transform: scale(1.2) rotate(10deg);
-  filter: drop-shadow(0 8px 16px rgba(0, 173, 111, 0.5));
+  transform: scale(1.1);
 }
 
 .skill-card:hover .skill-name {
-  color: rgb(0, 173, 111);
-  text-shadow: 0 0 10px rgba(0, 173, 111, 0.5);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Tooltips */
@@ -313,8 +281,8 @@
 /* Responsividade */
 @media (max-width: 1024px) {
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
   }
   
   .skills-categories {
@@ -340,8 +308,8 @@
   }
   
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
     padding: 0 10px;
   }
   
@@ -417,8 +385,8 @@
   }
   
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
     padding: 0 15px;
   }
   
@@ -495,8 +463,8 @@
   }
   
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 6px;
     padding: 0 12px;
   }
   
