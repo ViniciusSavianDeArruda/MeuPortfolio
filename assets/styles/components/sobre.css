@@ -1,6 +1,7 @@
 .sobre {
   padding: 120px 0;
   position: relative;
+  color: #ffffff; /* texto branco em fundo cinza muito escuro */
 }
 
 .sobre h2 {
@@ -76,7 +77,7 @@
 .sobre-conteudo p {
   font-size: 18px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 25px;
   text-align: justify;
 }

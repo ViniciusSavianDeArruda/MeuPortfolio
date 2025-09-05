@@ -177,3 +177,42 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   document.body.classList.add('loaded');
 });
+
+// Destacar link ativo do menu conforme seção visível
+const sections = document.querySelectorAll('section[id]');
+const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
+
+if (sections.length && menuLinks.length) {
+  const activeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        menuLinks.forEach((link) => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach((sec) => activeObserver.observe(sec));
+}
+
+// Copiar email com feedback
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.copy-btn');
+  if (!btn) return;
+  const text = btn.getAttribute('data-copy');
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.classList.add('success');
+    const original = btn.textContent;
+    btn.textContent = 'Copiado!';
+    setTimeout(() => {
+      btn.classList.remove('success');
+      btn.textContent = original;
+    }, 1500);
+  } catch (err) {
+    btn.textContent = 'Falhou :(';
+    setTimeout(() => (btn.textContent = 'Copiar'), 1500);
+  }
+});

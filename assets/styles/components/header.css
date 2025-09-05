@@ -67,17 +67,27 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, rgb(0, 173, 111), #04FF6E);
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
   transition: width 0.3s ease;
 }
 
 .menu a:hover {
-  color: rgb(0, 173, 111);
+  color: var(--accent-secondary);
   transform: translateY(-2px);
 }
 
 .menu a:hover::after {
   width: 100%;
+}
+
+/* Link ativo da seção visível */
+.menu a.active {
+  color: var(--accent-primary);
+}
+
+.menu a.active::after {
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
 }
 
 /* Menu mobile */

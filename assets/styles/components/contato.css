@@ -56,14 +56,15 @@
 }
 
 .contact-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-  padding: 40px 30px;
-  transition: all 0.4s ease;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 24px 10px 24px 0;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .contact-card::before {
@@ -81,12 +82,7 @@
   left: 100%;
 }
 
-.contact-card:hover {
-  transform: translateY(-10px);
-  background: rgba(0, 173, 111, 0.05);
-  border-color: rgba(0, 173, 111, 0.3);
-  box-shadow: 0 25px 50px rgba(0, 173, 111, 0.15);
-}
+.contact-card:hover { transform: translateY(-3px); }
 
 .contact-icon {
   display: flex;
@@ -114,7 +110,7 @@
 }
 
 .contact-card:hover h3 {
-  color: rgb(0, 173, 111);
+  color: var(--accent-secondary);
 }
 
 .contact-card p {
@@ -140,6 +136,34 @@
   overflow: hidden;
 }
 
+/* Botão copiar email */
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.copy-btn:hover {
+  background: rgba(46, 230, 166, 0.12);
+  border-color: rgba(46, 230, 166, 0.5);
+  color: #fff;
+}
+
+.copy-btn.success {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: #0a0a0a;
+  border-color: transparent;
+}
+
 .contact-btn::before {
   content: '';
   position: absolute;
@@ -157,18 +181,19 @@
 
 .contact-btn:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 173, 111, 0.4);
-  background: linear-gradient(135deg, #04FF6E, rgb(0, 173, 111));
+  box-shadow: 0 8px 25px rgba(46, 230, 166, 0.35);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
 }
 
 .contact-cta {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-  padding: 50px 40px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 36px 10px 36px 0;
   position: relative;
   overflow: hidden;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .contact-cta::before {
@@ -238,8 +263,8 @@
 
 .cta-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 30px rgba(0, 173, 111, 0.4);
-  background: linear-gradient(135deg, #04FF6E, rgb(0, 173, 111));
+  box-shadow: 0 8px 30px rgba(46, 230, 166, 0.35);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
 }
 
 /* Responsividade */
