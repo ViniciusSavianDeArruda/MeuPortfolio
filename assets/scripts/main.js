@@ -1,10 +1,12 @@
 import initTooltip from "./modules/tooltip.js";
 import initMostrarGotop from "./modules/gotop.js";
+import initCarousel from "./modules/carousel.js";
 
 // Inicialização das animações
 new SimpleAnime();
 initTooltip();
 initMostrarGotop();
+initCarousel();
 
 // Header scroll effect
 const header = document.querySelector('.header');
