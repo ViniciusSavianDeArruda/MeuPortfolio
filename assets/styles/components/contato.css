@@ -136,34 +136,6 @@
   overflow: hidden;
 }
 
-/* Botão copiar email */
-.copy-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.9);
-  border-radius: 40px;
-  font-size: 13px;
-  font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.copy-btn:hover {
-  background: rgba(46, 230, 166, 0.12);
-  border-color: rgba(46, 230, 166, 0.5);
-  color: #fff;
-}
-
-.copy-btn.success {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  color: #0a0a0a;
-  border-color: transparent;
-}
-
 .contact-btn::before {
   content: '';
   position: absolute;

@@ -196,23 +196,3 @@ if (sections.length && menuLinks.length) {
 
   sections.forEach((sec) => activeObserver.observe(sec));
 }
-
-// Copiar email com feedback
-document.addEventListener('click', async (e) => {
-  const btn = e.target.closest('.copy-btn');
-  if (!btn) return;
-  const text = btn.getAttribute('data-copy');
-  try {
-    await navigator.clipboard.writeText(text);
-    btn.classList.add('success');
-    const original = btn.textContent;
-    btn.textContent = 'Copiado!';
-    setTimeout(() => {
-      btn.classList.remove('success');
-      btn.textContent = original;
-    }, 1500);
-  } catch (err) {
-    btn.textContent = 'Falhou :(';
-    setTimeout(() => (btn.textContent = 'Copiar'), 1500);
-  }
-});
