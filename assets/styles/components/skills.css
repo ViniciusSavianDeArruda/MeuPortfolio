@@ -40,15 +40,6 @@
   line-height: 1.6;
 }
 
-/* Ícones em verde/branco para contrastar no fundo preto */
-.skill-icon {
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) brightness(1);
-}
-
-.skill-card:hover .skill-icon {
-  filter: drop-shadow(0 0 12px rgba(0, 173, 111, 0.6)) brightness(1.1);
-}
-
 /* Skills Categories */
 .skills-categories {
   display: flex;
@@ -139,6 +130,7 @@
   transition: all 0.3s ease;
   z-index: 2;
   position: relative;
+  filter: none;
 }
 
 .skill-card:hover {
@@ -147,6 +139,7 @@
 
 .skill-card:hover .skill-icon {
   transform: scale(1.05);
+  filter: none;
 }
 
 .skill-card:hover .skill-name {
