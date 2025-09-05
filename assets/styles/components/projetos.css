@@ -156,6 +156,9 @@
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 25px;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .projeto-tech {
@@ -345,7 +348,7 @@
 
 /* Contador de Slides */
 .slide-counter {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
   color: rgba(255, 255, 255, 0.6);
@@ -586,21 +589,7 @@
   animation: slideIn 0.6s ease-out;
 }
 
-/* Auto-play indicator */
+/* Barra de progresso removida */
 .carousel-progress {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  height: 3px;
-  background: rgba(0, 173, 111, 0.3);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.carousel-progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, rgb(0, 173, 111), #04FF6E);
-  width: 0%;
-  transition: width 0.1s linear;
-  border-radius: 2px;
+  display: none;
 }

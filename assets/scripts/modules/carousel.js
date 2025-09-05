@@ -12,13 +12,18 @@ export default function initCarousel() {
 
   let currentSlide = 0;
   const totalSlides = slides.length;
-  let autoPlayInterval;
-  let progressInterval;
-  const autoPlayDelay = 5000; // 5 segundos
 
-  // Atualizar contador total
+  // Remover contador - carrossel infinito
   if (totalSlidesSpan) {
-    totalSlidesSpan.textContent = totalSlides;
+    totalSlidesSpan.style.display = 'none';
+  }
+  if (currentSlideSpan) {
+    currentSlideSpan.style.display = 'none';
+  }
+  // Esconder a barra separadora também
+  const separator = document.querySelector('.slide-counter span:nth-child(2)');
+  if (separator) {
+    separator.style.display = 'none';
   }
 
   // Função para ir para um slide específico
@@ -37,14 +42,8 @@ export default function initCarousel() {
     const translateX = -slideIndex * 100;
     track.style.transform = `translateX(${translateX}%)`;
 
-    // Atualizar contador
-    if (currentSlideSpan) {
-      currentSlideSpan.textContent = slideIndex + 1;
-    }
-
     currentSlide = slideIndex;
     updateButtons();
-    resetAutoPlay();
   }
 
   // Função para ir para o próximo slide
@@ -61,45 +60,13 @@ export default function initCarousel() {
 
   // Atualizar estado dos botões
   function updateButtons() {
+    // Carrossel infinito - botões sempre habilitados
     if (prevBtn) {
-      prevBtn.disabled = currentSlide === 0;
+      prevBtn.disabled = false;
     }
     if (nextBtn) {
-      nextBtn.disabled = currentSlide === totalSlides - 1;
+      nextBtn.disabled = false;
     }
-  }
-
-  // Auto-play functionality
-  function startAutoPlay() {
-    let progress = 0;
-    
-    progressInterval = setInterval(() => {
-      progress += 100 / (autoPlayDelay / 100);
-      if (progressBar) {
-        progressBar.style.width = `${progress}%`;
-      }
-    }, 100);
-
-    autoPlayInterval = setInterval(() => {
-      nextSlide();
-    }, autoPlayDelay);
-  }
-
-  function stopAutoPlay() {
-    if (autoPlayInterval) {
-      clearInterval(autoPlayInterval);
-    }
-    if (progressInterval) {
-      clearInterval(progressInterval);
-    }
-    if (progressBar) {
-      progressBar.style.width = '0%';
-    }
-  }
-
-  function resetAutoPlay() {
-    stopAutoPlay();
-    startAutoPlay();
   }
 
   // Event listeners
@@ -138,7 +105,6 @@ export default function initCarousel() {
 
   track.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
-    stopAutoPlay();
   });
 
   track.addEventListener('touchmove', (e) => {
@@ -155,8 +121,6 @@ export default function initCarousel() {
       } else {
         prevSlide();
       }
-    } else {
-      resetAutoPlay();
     }
   });
 
@@ -169,7 +133,6 @@ export default function initCarousel() {
     isDragging = true;
     startMouseX = e.clientX;
     track.style.cursor = 'grabbing';
-    stopAutoPlay();
     e.preventDefault();
   });
 
@@ -193,8 +156,6 @@ export default function initCarousel() {
       } else {
         prevSlide();
       }
-    } else {
-      resetAutoPlay();
     }
   });
 
@@ -202,50 +163,9 @@ export default function initCarousel() {
     if (isDragging) {
       isDragging = false;
       track.style.cursor = 'grab';
-      resetAutoPlay();
-    }
-  });
-
-  // Pausar auto-play quando hover no carrossel
-  const carouselContainer = document.querySelector('.carousel-container');
-  if (carouselContainer) {
-    carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-    carouselContainer.addEventListener('mouseleave', startAutoPlay);
-  }
-
-  // Pausar auto-play quando a aba não está visível
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      stopAutoPlay();
-    } else {
-      startAutoPlay();
     }
   });
 
   // Inicializar
   goToSlide(0);
-  startAutoPlay();
-
-  // Intersection Observer para pausar quando não está visível
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startAutoPlay();
-      } else {
-        stopAutoPlay();
-      }
-    });
-  }, { threshold: 0.5 });
-
-  if (carouselContainer) {
-    observer.observe(carouselContainer);
-  }
-
-  // Cleanup function
-  return () => {
-    stopAutoPlay();
-    if (observer && carouselContainer) {
-      observer.unobserve(carouselContainer);
-    }
-  };
 }
