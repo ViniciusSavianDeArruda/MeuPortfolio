@@ -1,13 +1,33 @@
-import initTooltip from "./modules/tooltip.js";
-import initMostrarGotop from "./modules/gotop.js";
-import initCarousel from "./modules/carousel.js";
-
 // Inicialização das animações
 new SimpleAnime();
 initTooltip();
 initMostrarGotop();
 initCarousel();
-// initThemeToggle(); (revertido)
+initThemeToggle();
+
+// Botão "Mostrar Todas" as tecnologias
+const showAllBtn = document.getElementById('show-all-tech');
+const hiddenTechs = document.querySelectorAll('.hidden-tech');
+let isExpanded = false;
+
+if (showAllBtn) {
+  showAllBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    isExpanded = !isExpanded;
+    
+    hiddenTechs.forEach((tech, index) => {
+      if (isExpanded) {
+        setTimeout(() => {
+          tech.classList.add('show');
+        }, index * 50);
+      } else {
+        tech.classList.remove('show');
+      }
+    });
+    
+    showAllBtn.textContent = isExpanded ? 'Mostrar Menos' : 'Mostrar Todas (18)';
+  });
+}
 
 // Header scroll effect
 const header = document.querySelector('.header');
