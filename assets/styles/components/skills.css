@@ -116,7 +116,7 @@
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000000;
   text-align: center;
   transition: all 0.3s ease;
   margin-top: 10px;
@@ -143,7 +143,7 @@
 }
 
 .skill-card:hover .skill-name {
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Tooltips */
@@ -226,7 +226,28 @@
 }
 
 .tech-card img{ width:56px; height:56px; object-fit:contain }
-.tech-card span{ color: rgba(255,255,255,0.9); font-weight:600; font-size:14px }
+.tech-card span{ color: #ffffff; font-weight:600; font-size:14px }
+
+/* Cards ocultos inicialmente */
+.tech-card.hidden-tech {
+  display: none;
+}
+
+.tech-card.hidden-tech.show {
+  display: flex;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .tech-cta{ margin-top: 10px }
 
