@@ -7,6 +7,7 @@ new SimpleAnime();
 initTooltip();
 initMostrarGotop();
 initCarousel();
+// initThemeToggle(); (revertido)
 
 // Header scroll effect
 const header = document.querySelector('.header');

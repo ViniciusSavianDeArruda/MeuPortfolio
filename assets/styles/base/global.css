@@ -1,15 +1,26 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 173, 111, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(4, 255, 110, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 173, 111, 0.05) 0%, transparent 50%),
-  linear-gradient(135deg, var(--bg-black) 0%, #121212 50%, #0f0f0f 100%);
+body {
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(0, 173, 111, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(4, 255, 110, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(0, 173, 111, 0.05) 0%,
+      transparent 50%
+    ),
+    linear-gradient(135deg, var(--bg-black) 0%, #121212 50%, #0f0f0f 100%);
   background-attachment: fixed;
-  font-family: 'Inter', 'DM Sans', sans-serif;
+  font-family: "Inter", "DM Sans", sans-serif;
   line-height: 1.6;
   color: #ffffff;
   overflow-x: hidden;
@@ -18,18 +29,29 @@ body{
 
 /* Efeito de partículas sutis com CSS */
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.1), transparent),
+  background-image: radial-gradient(
+      2px 2px at 20px 30px,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    ),
     radial-gradient(2px 2px at 40px 70px, rgba(0, 173, 111, 0.2), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.08), transparent),
+    radial-gradient(
+      1px 1px at 90px 40px,
+      rgba(255, 255, 255, 0.08),
+      transparent
+    ),
     radial-gradient(1px 1px at 130px 80px, rgba(4, 255, 110, 0.1), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.06), transparent);
+    radial-gradient(
+      2px 2px at 160px 30px,
+      rgba(255, 255, 255, 0.06),
+      transparent
+    );
   background-repeat: repeat;
   background-size: 200px 100px;
   animation: float-particles 20s linear infinite;
@@ -39,10 +61,18 @@ body::before {
 }
 
 @keyframes float-particles {
-  0% { transform: translateY(0px) translateX(0px); }
-  33% { transform: translateY(-10px) translateX(5px); }
-  66% { transform: translateY(5px) translateX(-5px); }
-  100% { transform: translateY(0px) translateX(0px); }
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  33% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  66% {
+    transform: translateY(5px) translateX(-5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
 }
 
 body::-webkit-scrollbar {
@@ -56,15 +86,15 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, rgb(0, 173, 111), #0b9946);
-  border-radius: 10px; 
+  border-radius: 10px;
   border: none;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #04FF6E, rgb(0, 173, 111));
+  background: linear-gradient(180deg, #04ff6e, rgb(0, 173, 111));
 }
 
-.gotop{
+.gotop {
   display: none;
   position: fixed;
   bottom: 32px;
@@ -86,13 +116,12 @@ body::-webkit-scrollbar-thumb:hover {
   box-shadow: 0 6px 25px rgba(0, 173, 111, 0.5);
 }
 
-.gotop.ativo{
+.gotop.ativo {
   display: flex;
   animation: gotop 0.5s forwards;
 }
 
-.container{
-  max-width: 1200px;
+.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 20px;
@@ -128,14 +157,19 @@ section {
 }
 
 section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-primary),
+    transparent
+  );
   opacity: 0.5;
 }
 
@@ -144,7 +178,7 @@ section::before {
 #sobre::after,
 #skills::after,
 #projetos::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -153,51 +187,41 @@ section::before {
 
 /* Home: glow radial suave verde ao fundo */
 #home::after {
-  background:
-    radial-gradient(600px 300px at 20% 70%, rgba(0, 173, 111, 0.18), transparent 60%),
-    radial-gradient(400px 200px at 80% 20%, rgba(46, 230, 166, 0.12), transparent 60%);
+  background: radial-gradient(
+      600px 300px at 20% 70%,
+      rgba(0, 173, 111, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      400px 200px at 80% 20%,
+      rgba(46, 230, 166, 0.12),
+      transparent 60%
+    );
 }
 
-/* Sobre: grid sutil + brilho no centro */
-#sobre::after {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    radial-gradient(500px 250px at 50% 20%, rgba(0, 173, 111, 0.12), transparent 60%);
-  background-size: 40px 40px, 40px 40px, auto;
-  background-position: 0 0, 0 0, center;
-  mask-image: radial-gradient(closest-side, rgba(0,0,0,0.8), transparent 90%);
-}
-
-/* Skills: faixas diagonais muito suaves + glow */
+/* Projetos: glows verde/mint para compor com o tema (linhas removidas) */
+#projetos::after,
 #skills::after {
   background:
-    repeating-linear-gradient(-45deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 16px),
-    radial-gradient(500px 250px at 30% 30%, rgba(0, 173, 111, 0.12), transparent 60%);
-}
-
-/* Projetos: linhas diagonais sutis + glows verde/mint para compor com o tema */
-#projetos::after {
-  background:
-    /* textura leve */
-    repeating-linear-gradient(120deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 22px),
     /* glows de composição */
-    radial-gradient(800px 320px at 15% 30%, rgba(0, 173, 111, 0.10), transparent 60%),
-    radial-gradient(720px 300px at 85% 70%, rgba(46, 230, 166, 0.10), transparent 60%),
+      radial-gradient(
+        800px 320px at 15% 30%,
+        rgba(0, 173, 111, 0.1),
+        transparent 60%
+      ),
+    radial-gradient(
+      720px 300px at 85% 70%,
+      rgba(46, 230, 166, 0.1),
+      transparent 60%
+    ),
     /* vinheta suave do topo */
-    linear-gradient(180deg, rgba(255,255,255,0.02), transparent 45%);
-  mask-image: radial-gradient(1200px 600px at 50% 50%, rgba(0,0,0,0.85), transparent 90%);
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 45%);
+  mask-image: radial-gradient(
+    1200px 600px at 50% 50%,
+    rgba(0, 0, 0, 0.85),
+    transparent 90%
+  );
 }
-
-/* Divisor sutil entre seções */
-section {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-/* Alternância de fundos por seção */
-#sobre { background: var(--bg-deep-gray); }
-#skills { background: var(--bg-black); }
-#projetos { background: var(--bg-dark-gray); }
 
 /* Efeito de glassmorphism para cards */
 .glass-effect {
@@ -287,9 +311,15 @@ section {
 
 /* Gradientes animados */
 @keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .animated-gradient {
