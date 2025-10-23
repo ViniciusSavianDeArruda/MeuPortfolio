@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vinicius Arruda - Desenvolvedor Web</title>
     <meta
       name="description"
@@ -12,9 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"rel="stylesheet"/>
   </head>
   <body>
     <!-- Header -->
@@ -62,23 +60,15 @@
               <img src="assets/images/icons/github-brands.svg" alt="GitHub" />
             </a>
             <a
-              href="https://www.linkedin.com/in/arrudavinicius/"
-              target="_blank"
-              class="social-link"
-              title="LinkedIn"
-            >
+              href="https://www.linkedin.com/in/arrudavinicius/"target ="_blank"class="social-link"title="LinkedIn">
               <img
-                src="assets/images/icons/linkedin-brands.svg"
-                alt="LinkedIn"
-              />
+                src="assets/images/icons/linkedin-brands.svg"alt="LinkedIn"/>
             </a>
           </div>
         </div>
         <div class="main-img" data-anime="400">
           <img
-            src="assets/images/hero-animation.svg"
-            alt="Desenvolvedor trabalhando"
-          />
+            src="assets/images/hero-animation.svg"alt="Desenvolvedor trabalhando"/>
         </div>
       </div>
     </section>
@@ -186,34 +176,59 @@
               <img src="assets/images/skills/icons8-git (2).svg" alt="Git" />
               <span>Git</span>
             </div>
-            <div class="tech-card">
-              <img src="#" alt="" />
-              <span></span>
+            <!-- Cards ocultos inicialmente -->
+            <div class="tech-card hidden-tech">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              <span>Python</span>
             </div>
-            <div class="tech-card">
-              <img src="#" alt="" />
-              <span></span>
+            <div class="tech-card hidden-tech">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+              <span>Figma</span>
             </div>
-            <div class="tech-card">
-              <img src="#" alt="" />
-              <span></span>
-            </div>
-            <div class="tech-card">
-              <img src="#" alt="" />
-              <span></span>
-            </div>
-            <div class="tech-card">
+            <div class="tech-card hidden-tech">
               <img src="" alt="" />
               <span></span>
             </div>
-            <div class="tech-card">
-              <img src="#" alt="" />
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
+              <span></span>
+            </div>
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
+              <span></span>
+            </div>
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
+              <span></span>
+            </div>
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
+              <span></span>
+            </div>
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
+              <span></span>
+            </div>
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
+              <span></span>
+            </div>
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
+              <span></span>
+            </div>
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
+              <span></span>
+            </div>
+            <div class="tech-card hidden-tech">
+              <img src="" alt="" />
               <span></span>
             </div>
           </div>
 
           <div class="tech-cta">
-            <a class="btn btn-primary" href="#">Show All (37)</a>
+            <button class="btn btn-primary" id="show-all-tech">Mostrar Todas</button>
           </div>
         </div>
 
@@ -516,8 +531,29 @@
       />
     </a>
 
+    <!-- Botão de Alternância de Tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+      <span class="theme-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+          <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </button>
+
     <!-- Scripts -->
     <script src="assets/scripts/utils/simple-anime.js"></script>
-    <script type="module" src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/modules/tooltip.js"></script>
+    <script src="assets/scripts/modules/gotop.js"></script>
+    <script src="assets/scripts/modules/carousel.js"></script>
+    <script src="assets/scripts/modules/theme-toggle.js"></script>
+    <script src="assets/scripts/main.js"></script>
   </body>
 </html>
