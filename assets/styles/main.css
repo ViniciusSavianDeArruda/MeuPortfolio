@@ -4,6 +4,7 @@
 
 /* Base Styles */
 @import "base/reset.css";
+@import "base/theme.css";
 @import "base/global.css";
 @import "base/cores.css";
 @import "base/tipografia.css";
@@ -17,3 +18,4 @@
 @import "components/projetos.css";
 @import "components/contato.css";
 @import "components/footer.css";
+
