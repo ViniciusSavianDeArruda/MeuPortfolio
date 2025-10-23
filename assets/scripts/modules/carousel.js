@@ -1,4 +1,4 @@
-export default function initCarousel() {
+function initCarousel() {
   const track = document.getElementById('carouselTrack');
   const slides = document.querySelectorAll('.projeto-slide');
   const prevBtn = document.getElementById('prevBtn');
