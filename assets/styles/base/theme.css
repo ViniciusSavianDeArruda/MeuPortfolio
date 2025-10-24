@@ -1,5 +1,14 @@
 /* Sistema de Temas - Modo Claro e Escuro */
 
+/* Desabilitar transições durante troca de tema para mudança instantânea */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
 /* Tema Escuro (Padrão) */
 :root,
 [data-theme="dark"] {

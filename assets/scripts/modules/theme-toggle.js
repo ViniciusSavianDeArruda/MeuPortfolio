@@ -33,9 +33,26 @@ function initThemeToggle() {
     }
 
     // Aplicar tema
-    function applyTheme(theme) {
+    function applyTheme(theme, skipTransition = false) {
+      // Desabilitar transições temporariamente para troca instantânea
+      if (skipTransition) {
+        html.classList.add('theme-transitioning');
+      }
+      
       html.setAttribute('data-theme', theme);
       updateToggleIcon(theme);
+      
+      // Reabilitar transições após a troca
+      if (skipTransition) {
+        // Forçar reflow
+        html.offsetHeight;
+        
+        // Remover classe após um frame
+        requestAnimationFrame(() => {
+          html.classList.remove('theme-transitioning');
+        });
+      }
+      
       console.log('Tema aplicado:', theme);
     }
 
@@ -78,7 +95,7 @@ function initThemeToggle() {
       
       console.log('Alternando tema:', currentTheme, '->', newTheme);
       
-      applyTheme(newTheme);
+      applyTheme(newTheme, true); // skipTransition = true para troca instantânea
       saveTheme(newTheme);
 
       // Adicionar animação de pulse ao botão
