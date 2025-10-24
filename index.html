@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Vinicius Arruda - Desenvolvedor Web</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinicius Arruda - Desenvolvedor Web | Front-end Developer</title>
+
+    <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Portfólio de Vinicius Savian de Arruda - Desenvolvedor Web e Estudante de Sistemas de Informação"
+      content="Portfólio de Vinicius Savian de Arruda - Desenvolvedor Web Front-end, estudante de Sistemas de Informação. Especializado em HTML, CSS, JavaScript e criação de interfaces modernas e responsivas."
     />
+    <meta
+      name="keywords"
+      content="desenvolvedor web, front-end developer, HTML, CSS, JavaScript, portfólio, web design, Vinicius Arruda, sistemas de informação"
+    />
+    <meta name="author" content="Vinicius Savian de Arruda" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="alternate icon" href="assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"rel="stylesheet"/>
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">VA</div>
+      </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
       <div class="header-content">
@@ -50,6 +75,53 @@
             experiências digitais incríveis e funcionais, sempre buscando criar
             soluções inovadoras.
           </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta-buttons">
+            <a href="#projetos" class="btn-hero btn-hero-primary">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 7H4C2.9 7 2 7.9 2 9V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V9C22 7.9 21.1 7 20 7Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+              Ver Projetos
+            </a>
+            <a href="#contato" class="btn-hero btn-hero-secondary">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <polyline
+                  points="22,6 12,13 2,6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+              Entrar em Contato
+            </a>
+          </div>
+
           <div class="social-links">
             <a
               href="https://github.com/ViniciusSavianDeArruda"
@@ -60,15 +132,23 @@
               <img src="assets/images/icons/github-brands.svg" alt="GitHub" />
             </a>
             <a
-              href="https://www.linkedin.com/in/arrudavinicius/"target ="_blank"class="social-link"title="LinkedIn">
+              href="https://www.linkedin.com/in/arrudavinicius/"
+              target="_blank"
+              class="social-link"
+              title="LinkedIn"
+            >
               <img
-                src="assets/images/icons/linkedin-brands.svg"alt="LinkedIn"/>
+                src="assets/images/icons/linkedin-brands.svg"
+                alt="LinkedIn"
+              />
             </a>
           </div>
         </div>
         <div class="main-img" data-anime="400">
           <img
-            src="assets/images/hero-animation.svg"alt="Desenvolvedor trabalhando"/>
+            src="assets/images/hero-animation.svg"
+            alt="Desenvolvedor trabalhando"
+          />
         </div>
       </div>
     </section>
@@ -129,6 +209,124 @@
       </div>
     </section>
 
+    <!-- Seção Educação e Experiência -->
+    <section id="educacao" class="education-section">
+      <div class="container">
+        <h2 class="font-1-gg-b" data-anime="200">Formação & Experiência</h2>
+
+        <div class="timeline">
+          <!-- Educação -->
+          <div class="timeline-item" data-anime="400">
+            <div class="timeline-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 3L2 9L12 15L22 9L12 3Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M2 15L12 21L22 15"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M2 12L12 18L22 12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - Presente</span>
+              <h3>Sistemas de Informação</h3>
+              <p class="timeline-institution">Faculdade/Universidade</p>
+              <p class="timeline-description">
+                Cursando bacharelado em Sistemas de Informação, com foco em
+                desenvolvimento de software, banco de dados, engenharia de
+                software e gestão de projetos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certificações/Cursos -->
+          <div class="timeline-item" data-anime="500">
+            <div class="timeline-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" />
+                <path d="M16 13H8" stroke="currentColor" stroke-width="2" />
+                <path d="M16 17H8" stroke="currentColor" stroke-width="2" />
+                <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024</span>
+              <h3>Desenvolvimento Web Front-end</h3>
+              <p class="timeline-institution">Cursos & Certificações</p>
+              <p class="timeline-description">
+                Cursos focados em HTML5, CSS3, JavaScript moderno, design
+                responsivo e boas práticas de desenvolvimento web.
+              </p>
+            </div>
+          </div>
+
+          <!-- Projetos/Freelance (opcional) -->
+          <div class="timeline-item" data-anime="600">
+            <div class="timeline-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2"
+                  y="7"
+                  width="20"
+                  height="14"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - Presente</span>
+              <h3>Projetos Pessoais</h3>
+              <p class="timeline-institution">Desenvolvimento Independente</p>
+              <p class="timeline-description">
+                Criação de projetos pessoais para aplicar conhecimentos
+                adquiridos, incluindo portfólios, landing pages e aplicações web
+                interativas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Seção Skills -->
     <section id="skills" class="minhas-skills">
       <div class="container">
@@ -176,59 +374,83 @@
               <img src="assets/images/skills/icons8-git (2).svg" alt="Git" />
               <span>Git</span>
             </div>
-            <!-- Cards ocultos inicialmente -->
+            <!-- Cards adicionais -->
             <div class="tech-card hidden-tech">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python"
+              />
               <span>Python</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                alt="Figma"
+              />
               <span>Figma</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+              />
+              <span>React</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+              />
+              <span>Node.js</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              />
+              <span>TypeScript</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                alt="Sass"
+              />
+              <span>Sass</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind"
+              />
+              <span>Tailwind CSS</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code"
+              />
+              <span>VS Code</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="MySQL"
+              />
+              <span>MySQL</span>
             </div>
             <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
-            </div>
-            <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
-            </div>
-            <div class="tech-card hidden-tech">
-              <img src="" alt="" />
-              <span></span>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                alt="PostgreSQL"
+              />
+              <span>PostgreSQL</span>
             </div>
           </div>
 
           <div class="tech-cta">
-            <button class="btn btn-primary" id="show-all-tech">Mostrar Todas</button>
+            <button class="btn btn-primary" id="show-all-tech">
+              Mostrar Todas
+            </button>
           </div>
         </div>
 
@@ -532,18 +754,98 @@
     </a>
 
     <!-- Botão de Alternância de Tema -->
-    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      aria-label="Alternar tema claro/escuro"
+    >
       <span class="theme-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-          <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="5"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <line
+            x1="12"
+            y1="1"
+            x2="12"
+            y2="3"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <line
+            x1="12"
+            y1="21"
+            x2="12"
+            y2="23"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <line
+            x1="4.22"
+            y1="4.22"
+            x2="5.64"
+            y2="5.64"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <line
+            x1="18.36"
+            y1="18.36"
+            x2="19.78"
+            y2="19.78"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <line
+            x1="1"
+            y1="12"
+            x2="3"
+            y2="12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <line
+            x1="21"
+            y1="12"
+            x2="23"
+            y2="12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <line
+            x1="4.22"
+            y1="19.78"
+            x2="5.64"
+            y2="18.36"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <line
+            x1="18.36"
+            y1="5.64"
+            x2="19.78"
+            y2="4.22"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
         </svg>
       </span>
     </button>
