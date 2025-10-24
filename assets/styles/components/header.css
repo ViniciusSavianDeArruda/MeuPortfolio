@@ -137,7 +137,7 @@
     top: 75px;
     left: 0;
     right: 0;
-    background: rgba(10, 10, 10, 0.98);
+    background: var(--bg-secondary);
     backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 30px 20px;
@@ -146,9 +146,9 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-color);
     z-index: 999;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-lg);
   }
 
   .menu.active {
@@ -160,7 +160,7 @@
   .menu a {
     font-size: 18px;
     padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-color);
     text-align: center;
     transition: all 0.3s ease;
   }
@@ -170,7 +170,7 @@
   }
 
   .menu a:hover {
-    background: rgba(0, 173, 111, 0.1);
+    background: var(--accent-hover);
     border-radius: 8px;
     padding-left: 10px;
     padding-right: 10px;
