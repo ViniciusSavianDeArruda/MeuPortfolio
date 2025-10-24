@@ -5,6 +5,28 @@ initMostrarGotop();
 initCarousel();
 initThemeToggle();
 
+// Loading Screen
+window.addEventListener('load', () => {
+  const loadingScreen = document.querySelector('.loading-screen');
+  if (loadingScreen) {
+    setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+    }, 500);
+  }
+  document.body.classList.add('loaded');
+});
+
+// Scroll Progress Bar
+const scrollProgressBar = document.querySelector('.scroll-progress-bar');
+if (scrollProgressBar) {
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    scrollProgressBar.style.width = scrollPercentage + '%';
+  });
+}
+
 // Botão "Mostrar Todas" as tecnologias
 const showAllBtn = document.getElementById('show-all-tech');
 const hiddenTechs = document.querySelectorAll('.hidden-tech');
@@ -25,7 +47,7 @@ if (showAllBtn) {
       }
     });
     
-    showAllBtn.textContent = isExpanded ? 'Mostrar Menos' : 'Mostrar Todas (18)';
+    showAllBtn.textContent = isExpanded ? 'Mostrar Menos' : 'Mostrar Todas (16)';
   });
 }
 
