@@ -184,7 +184,58 @@
   
   .download-btn {
     padding: 14px 28px;
-    font-size: 15px;
+    font-size: 14px;
+  }
+}
+
+/* GitHub Stats */
+.github-stats {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.github-stats h3 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stats-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--bg-card);
+}
+
+.stats-grid img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 173, 111, 0.3);
+  border-color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .github-stats {
+    margin-top: 60px;
+  }
+
+  .github-stats h3 {
+    font-size: 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
