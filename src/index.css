@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 210 20% 90%;
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 90%;
+    --primary: 160 100% 50%;
+    --primary-foreground: 220 20% 6%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 160 80% 45%;
+    --accent-foreground: 220 20% 6%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 160 100% 50%;
+    --radius: 0.5rem;
+    --glow: 160 100% 50%;
+    --code-bg: 220 18% 12%;
+    --gradient-start: 160 100% 50%;
+    --gradient-end: 190 100% 50%;
+  }
+
+  * {
+    @apply border-border;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+  }
+
+  .font-mono {
+    font-family: "JetBrains Mono", monospace;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)),
+      hsl(var(--gradient-end))
+    );
+  }
+
+  .glow {
+    box-shadow:
+      0 0 20px hsl(var(--glow) / 0.3),
+      0 0 40px hsl(var(--glow) / 0.1);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--glow) / 0.5);
+  }
+
+  .border-glow {
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: 0 0 15px hsl(var(--glow) / 0.2);
+  }
+
+  .code-block {
+    @apply bg-[hsl(var(--code-bg))] rounded-lg p-4 font-mono text-sm;
+  }
+
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translateY(12px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .animate-scroll-down {
+    animation: scroll-down 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
